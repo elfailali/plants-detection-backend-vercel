@@ -25,6 +25,8 @@ router.route("/contact").post((req, res) =>{
         console.log("contact API Called")
         console.log(newContact)
         newContact.save()
+        res.status(201).json({ message: "Contact information saved successfully" });
+
     } catch (error) {
         console.log(error)
     }
